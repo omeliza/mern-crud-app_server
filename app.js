@@ -22,7 +22,7 @@ app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 mongoose
   .connect(
     `mongodb+srv://${process.env.MD_USER}:${process.env.MD_PASSWORD}@cluster0.c0lqh.mongodb.net/usersData`,
-    { useNewUrlParser: true }
+    { useNewUrlParser: true }, {useUnifiedTopology: true}
   )
   .then(() => console.log("mongodb connected"))
   .catch((e) => console.log(e.message));

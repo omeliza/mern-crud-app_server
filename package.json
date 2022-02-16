@@ -17,6 +17,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
+    "start": "nodemon -r esm app.js",
     "gen": "node ./swagger/index.js"
   }
 }
