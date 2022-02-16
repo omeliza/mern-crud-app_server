@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 // const mongoose = require('mongoose');
 import bodyParser from "body-parser";
 import cors from 'cors';
+import 'dotenv/config';
 import userRouter from './routes/users';
 import fs from "fs";
 import swaggerUi from "swagger-ui-express";
@@ -20,7 +21,7 @@ app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 mongoose
   .connect(
-    "mongodb+srv://mongodb:uBe8KYyrF3BGQX8@cluster0.c0lqh.mongodb.net/usersData",
+    `mongodb+srv://${process.env.MD_USER}:${process.env.MD_PASSWORD}@cluster0.c0lqh.mongodb.net/usersData`,
     { useNewUrlParser: true }
   )
   .then(() => console.log("mongodb connected"))
