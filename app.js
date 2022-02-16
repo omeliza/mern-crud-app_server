@@ -20,7 +20,7 @@ app.use("/api-doc", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 mongoose
   .connect(
-    "mongodb+srv://omeliza:uBe8KYyrF3BGQX8@cluster0.c0lqh.mongodb.net/usersData",
+    "mongodb+srv://mongodb:uBe8KYyrF3BGQX8@cluster0.c0lqh.mongodb.net/usersData",
     { useNewUrlParser: true }
   )
   .then(() => console.log("mongodb connected"))
