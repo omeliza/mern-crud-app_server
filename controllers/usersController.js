@@ -27,7 +27,7 @@ export const getUser = async (req, res) => {
   try {
     const { id } = req.params;
     const user = await User.findById(id);
-    res.json(user);
+    res.status(200).json(user);
   } catch (e) {
     res.send(e.message);
   }
