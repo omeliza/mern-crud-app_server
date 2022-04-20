@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "@vercel/ncc": "0.33.4",
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
@@ -14,8 +13,7 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "node app.js",
-    "build": "ncc build server.js -o dist"
+    "start": "node app.js"
   },
   "type": "module"
 }
