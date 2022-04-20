@@ -4,7 +4,7 @@ import  mongoose  from 'mongoose';
 export const getUsers = async (req, res) => {
   try {
     const users = await User.find();
-    res.send(users);
+    res.status(200).send(users);
   } catch (e) {
     res.send(e.message);
   }
