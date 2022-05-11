@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/users", userRouter);
-app.get('/get', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Users CRUD API');
 });
 mongoose
