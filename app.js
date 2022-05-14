@@ -11,9 +11,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/users', userRouter);
+
 app.get('/', (req, res) => {
   res.send('Users CRUD API');
 });
+
 mongoose
   .connect(
     `mongodb+srv://${process.env.MD_USER}:${process.env.MD_PASSWORD}@cluster0.c0lqh.mongodb.net/usersData`,
