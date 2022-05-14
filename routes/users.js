@@ -1,10 +1,10 @@
-import {
+const {
   createUser,
   deleteUser,
   getUser,
   getUsers,
   updateUser,
-} from '../controllers/usersController';
+} = require('../controllers/usersController');
 
 const express = require('express');
 
