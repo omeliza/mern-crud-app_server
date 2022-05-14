@@ -7,7 +7,7 @@ module.exports = {
     jest: true,
   },
   extends: ['airbnb-base', 'prettier', 'eslint:recommended'],
-  plugins: ['prettier', 'import'],
+  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 'latest',
   },
@@ -41,12 +41,5 @@ module.exports = {
     'require-await': 'error',
     'no-return-await': 'error',
     'import/no-absolute-path': 'error',
-    'import/no-cycle': 'warn',
-    'import/no-useless-path-segments': [
-      'error',
-      {
-        noUselessIndex: true,
-      },
-    ],
   },
 };
