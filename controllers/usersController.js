@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
-import User from '../models/user';
+const mongoose = require('mongoose');
+const User = require('../models/user');
 /* eslint-disable camelcase */
 /* eslint-disable consistent-return */
-export const getUsers = async (req, res) => {
+exports.getUsers = async (req, res) => {
   try {
     const users = await User.find();
     res.status(200).json(users);
@@ -11,7 +11,7 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const createUser = async (req, res) => {
+exports.createUser = async (req, res) => {
   try {
     const { first_name, last_name, email } = req.body;
     const newUser = new User({ first_name, last_name, email });
@@ -22,7 +22,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-export const getUser = async (req, res) => {
+exports.getUser = async (req, res) => {
   try {
     const { id } = req.params;
     const user = await User.findById(id);
@@ -35,7 +35,7 @@ export const getUser = async (req, res) => {
   }
 };
 
-export const updateUser = async (req, res) => {
+exports.updateUser = async (req, res) => {
   try {
     const { id } = req.params;
     const { email, first_name, last_name } = req.body.user;
@@ -55,7 +55,7 @@ export const updateUser = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
+exports.deleteUser = async (req, res) => {
   try {
     const { id } = req.params;
     if (!mongoose.Types.ObjectId.isValid(id)) {
