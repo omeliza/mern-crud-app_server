@@ -10,11 +10,17 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "eslint": "8.15.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.0.0",
     "nodemon": "^2.0.15"
   },
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js"
-  },
-  "type": "module"
+    "start": "node app.js",
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "lint:fix": "eslint \"**/*.js\" --ignore-pattern node_modules/ --fix",
+    "lint:format": "prettier --write ."
+  }
 }
