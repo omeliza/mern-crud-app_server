@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({ origin: process.env.CLIENT_URL }));
 app.use('/users', userRouter);
 
 app.get('/', (req, res) => {
