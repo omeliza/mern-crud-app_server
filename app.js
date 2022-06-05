@@ -17,7 +17,7 @@ const options = {
     },
     servers: [
       {
-        url: 'http://localhost:9000/',
+        url: process.env.SERVER_URL,
       },
     ],
   },
@@ -31,8 +31,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-// app.use(cors({ origin: process.env.CLIENT_URL }));
-app.use(cors());
+app.use(cors({ origin: process.env.CLIENT_URL }));
 app.use('/users', userRouter);
 app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
