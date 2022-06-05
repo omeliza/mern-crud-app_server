@@ -1,6 +1,6 @@
 ## MERN Stack Application
 
-The **_MERN Stack Application_** is allows to perform CRUD operations with users. You can check API Documentation by following the next link https://users-crud-application.netlify.app/api-docs
+The **_MERN Stack Application_** is allows to perform CRUD operations with users. You can check API Documentation by following the next link https://users-crud-application.herokuapp.com/api-docs
 
 ### Where to find deployed project
 
