@@ -133,3 +133,5 @@ dist
 credentials.js
 
 launch.json
+
+.env
