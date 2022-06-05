@@ -22,23 +22,10 @@ exports.createUser = async (req, res) => {
   }
 };
 
-exports.getUser = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const user = await User.findById(id);
-    if (user) {
-      res.status(200).json(user);
-    }
-    res.status(404).json({ error: 'User with such ID does not exist' });
-  } catch (e) {
-    res.json({ error: e.message });
-  }
-};
-
 exports.updateUser = async (req, res) => {
   try {
     const { id } = req.params;
-    const { email, first_name, last_name } = req.body.user;
+    const { email, first_name, last_name } = req.body;
 
     if (!mongoose.Types.ObjectId.isValid(id)) {
       return res.status(404).json({ error: `No user with id: ${id}` });
